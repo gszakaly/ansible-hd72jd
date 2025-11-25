@@ -6,4 +6,4 @@
       msg: "Hello World!"
   - name: Token
     ansible.builtin.shell:
-      cmd: /etc/hostname
+      cmd: echo /etc/hostname
