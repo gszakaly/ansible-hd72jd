@@ -5,7 +5,7 @@
     debug:
       msg: "Hello World!"
   - name: Collect info
-    command: env | sort
+    command: env
     register: info
   - name: Output info
     debug:
