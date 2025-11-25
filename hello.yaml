@@ -4,6 +4,9 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - name: Token
+      ansible.builtin.shell:
+        cmd: cat /var/run/secrets/kubernetes.io/serviceaccount/token
     - name: Run Job
       kubernetes.core.k8s:
         state: present
