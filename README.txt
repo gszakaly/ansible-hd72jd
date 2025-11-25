@@ -1,13 +1,28 @@
 http://awx.local (admin/admin)
 
-Projects > Add
+Create Project. A project corresponds to a Git repository, where the playbooks are.
 
-  Name: Test
+  Resources > Projects > Add
 
-  Source Control URL: https://github.com/gszakaly/ansible-hd72jd.git
+    Name:                Test
+    Source Control URL:  https://github.com/gszakaly/ansible-hd72jd.git
 
-Templates > Add > Add job template
+Create execution environment. An execution environment defines the image of the Pod
+that is running the playbook.
 
-  Inventory: Demo Inventory
+  Administration > Execution Environments > Add
 
-  Project: Test
+    Name:   Alpine
+    Image:  alpine:3.22.2
+
+Create a template. A template defines a playbook from a project running in an execution
+environment
+
+  Resources > Templates > Add > Add job template
+
+    Name:                   Test
+    Inventory:              Demo Inventory (not sure how it works, but this runs the playbook in a Pod)
+    Project:                Test
+    Execution Environment:  Alpine
+    Playbook:               hello.yaml
+
