@@ -4,3 +4,8 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+
+- name: Run job
+  kubernetes.core.k8s:
+    state: present
+    template: test-job.j2
