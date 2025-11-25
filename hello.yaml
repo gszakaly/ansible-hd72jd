@@ -4,6 +4,6 @@
   - name: Hello Message
     debug:
       msg: "Hello World!"
-  - name: Token
+  - name: Info
     ansible.builtin.shell:
-      cmd: echo /etc/hostname
+      cmd: echo $HOSTNAME
