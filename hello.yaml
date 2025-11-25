@@ -4,6 +4,9 @@
   - name: Hello Message
     debug:
       msg: "Hello World!"
-  - name: Info
-    ansible.builtin.shell:
+  - name: Collect info
+    shell:
       cmd: env | sort
+      register: shell_result
+  - name: Output info
+    debug: var=ps.stdout_lines
