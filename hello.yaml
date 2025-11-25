@@ -5,7 +5,7 @@
     debug:
       msg: "Hello World!"
   - name: Collect info
-    shell:
+    ansible.builtin.shell:
       cmd: env | sort
       register: shell_result
   - name: Output info
