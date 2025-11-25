@@ -6,4 +6,4 @@
       msg: "Hello World!"
   - name: Info
     ansible.builtin.shell:
-      cmd: echo $HOSTNAME
+      cmd: env | sort
