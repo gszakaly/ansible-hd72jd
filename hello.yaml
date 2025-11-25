@@ -5,8 +5,8 @@
     debug:
       msg: "Hello World!"
   - name: Collect info
-    ansible.builtin.shell:
-      cmd: env | sort
-      register: shell_result
+    command: env | sort
+    register: info
   - name: Output info
-    debug: var=ps.stdout_lines
+    debug:
+      msg: "{{ info.stdout }}"
