@@ -5,7 +5,7 @@
     debug:
       msg: "Hello World!"
   - name: Collect info
-    command: env
+    command: "echo $HOSTNAME"
     register: info
   - name: Output info
     debug:
