@@ -5,6 +5,8 @@
     debug:
       msg: "Hello World!"
   - name: Collect info
+    command: sleep 1000
+  - name: Collect info
     command: "echo $HOSTNAME"
     register: info
   - name: Output info
